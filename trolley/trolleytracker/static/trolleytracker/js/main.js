@@ -46,7 +46,7 @@ function getTrolleyLocations(map){
   clearTimeout(checkTimer);
   //$('#getupdate').show();
   $.ajax({
-      url: '/trolley/update/',
+      url: 'update',
       type: 'get',
       dataType: 'json',
       cache: false,
