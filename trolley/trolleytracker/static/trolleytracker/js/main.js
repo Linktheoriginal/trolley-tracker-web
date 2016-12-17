@@ -64,7 +64,7 @@ function getTrolleyLocations(map){
               markerColor: 'red'
             });
 
-            var oMapMarker = L.marker([data.CurrentLat, data.CurrentLon], {
+            var oMapMarker = L.marker([data.Lat, data.Lon], {
               icon: trolleyIcon
             }).addTo(oMap).bindPopup(popupText);
 
@@ -76,7 +76,7 @@ function getTrolleyLocations(map){
           } else {
               // existing trolley: update location and popup
               trolleys[data.ID].mapMarker
-                .setLatLng([data.CurrentLat, data.CurrentLon])
+                .setLatLng([data.Lat, data.Lon])
                 .setPopupContent(popupText);
           }
         });
